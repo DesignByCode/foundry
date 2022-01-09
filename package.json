@@ -1,0 +1,44 @@
+{
+  "name": "foundry",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {
+    "@wordpress/scripts": "^19.2.2",
+    "autoprefixer": "^10.4.2",
+    "browser-sync": "^2.27.7",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.5",
+    "postcss-import": "^14.0.2",
+    "prettier": "npm:wp-prettier@^2.2.1-beta-1",
+    "tailwindcss": "^3.0.12"
+  },
+  "scripts": {
+    "development:tailwindcss": "npx tailwindcss --postcss -i ./tailwindcss/tailwind.css -o ./theme/style.css",
+    "development:js": "wp-scripts start ./assets/js/foundry.js --output-path=theme/js",
+    "dev": "run-p development:*",
+    "watch:sync": "browser-sync start --proxy \"capetowntees.test\" --files \"theme\" --no-inject-changes",
+    "watch": "run-p watch:sync dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DesignByCode/foundry.git"
+  },
+  "keywords": [
+    "Tailwindcss",
+    "WordPress",
+    "Theme"
+  ],
+  "author": "designbycode",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DesignByCode/foundry/issues"
+  },
+  "homepage": "https://github.com/DesignByCode/foundry#readme",
+  "dependencies": {
+    "@headlessui/react": "^1.4.2",
+    "@heroicons/react": "^1.0.5",
+    "@tailwindcss/typography": "^0.5.0",
+    "axios": "^0.21.4"
+  }
+}

@@ -1,0 +1,11 @@
+.wp-block-button__link {
+    @apply px-5 py-2 rounded bg-primary-500 no-underline text-center inline-block shadow-primary-900 text-white hover:bg-primary-600;
+}
+
+.blocks-gallery-grid {
+    @apply p-0 m-0 border border-gray-500;
+}
+
+.blocks-gallery-grid {
+    @apply gap-2;
+}

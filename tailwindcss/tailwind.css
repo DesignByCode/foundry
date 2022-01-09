@@ -1,0 +1,5 @@
+@import "theme-header.css";
+
+@tailwind base;
+@tailwind utilities;
+@tailwind components;

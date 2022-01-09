@@ -1,0 +1,15 @@
+{
+    "name": "designbycode/foundry",
+    "autoload": {
+        "psr-4": {
+            "Foundry\\": "inc/"
+        }
+    },
+    "authors": [
+        {
+            "name": "designbycode",
+            "email": "claude@designbycode.co.za"
+        }
+    ],
+    "require": {}
+}
