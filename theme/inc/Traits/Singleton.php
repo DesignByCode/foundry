@@ -1,4 +1,11 @@
 <?php
+/**
+ * Singleton class
+ *
+ * @package WordPress
+ * @subpackage Foundry
+ * @since Foundry 1.0
+ */
 
 namespace Foundry\Traits;
 

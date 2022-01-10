@@ -19,8 +19,16 @@
 		</div>
 	</header>
 	<article class="wrapper">
-		<div class="bg-white prose mx-auto p-20 rounded-3xl -translate-y-20 shadow-2xl shadow-primary-500/20">
+		<div class="bg-white prose mx-auto px-20 pb-20 <?php if (!has_post_thumbnail()): ?> pt-20 <?php endif; ?> rounded-3xl -translate-y-20 shadow-2xl
+		shadow-primary-500/20">
 			<div class="entry-content">
+				<?php if (has_post_thumbnail()): ?>
+				<div class="-mx-20 relative mb-20">
+					<?php the_post_thumbnail('post-thumbnail',
+						['class' => 'w-full rounded-xl shadow-2xl shadow-primary-500 block'
+							, 'title' => 'Feature image for Post']); ?>
+					<?php endif; ?>
+				</div>
 				<?php the_content(); ?>
 			</div>
 		</div>
