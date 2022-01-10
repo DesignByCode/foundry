@@ -17,6 +17,7 @@
 
     <footer class="footer bg-gray-900 text-gray-300 py-24">
         <div class="wrapper">
+			<?php wp_nav_menu(['location' => 'foundry-main-menu']); ?>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, ex.
         </div>
     </footer>

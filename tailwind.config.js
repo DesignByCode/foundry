@@ -5,6 +5,7 @@ module.exports = {
     "./theme/**/*.{php,js}",
     "./assets/**/*.js",
   ],
+  important: false,
   theme: {
     extend: {
       colors: {
@@ -15,11 +16,16 @@ module.exports = {
       typography: ({ theme }) => ({
         DEFAULT: {
           css: {
-            maxWidth: theme("screens.lg"),
+            maxWidth: theme("columns.7xl"),
           },
         },
       }),
     },
   },
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [
+    require("@tailwindcss/typography"),
+    require("@tailwindcss/forms"),
+    require('@tailwindcss/line-clamp'),
+    require('@tailwindcss/aspect-ratio'),
+  ],
 };

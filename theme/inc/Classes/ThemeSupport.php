@@ -33,7 +33,6 @@ class ThemeSupport
 
 		add_theme_support( 'automatic-feed-links' );
 
-		add_theme_support( 'automatic-feed-links' );
 
 		add_theme_support( 'core-block-patterns' );
 
@@ -41,11 +40,13 @@ class ThemeSupport
 
 //		load_theme_textdomain( 'foundry', get_template_directory() . '/languages' );
 
-		add_theme_support( 'post-thumbnails' );
-
 		add_theme_support( 'post-formats',  $this->post_formats);
 
 		add_theme_support('customize-selective-refresh-widgets');
+
+		add_theme_support( 'post-thumbnails' );
+		add_image_size('square', 200, 200, true);
+		add_image_size('banner', 1200, 688, true);
 
 		global $content_width;
 		if ( ! isset ( $content_width) ) {

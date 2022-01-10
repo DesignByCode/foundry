@@ -15,3 +15,18 @@
 .link {
     @apply text-primary-500 hover:underline decoration-2;
 }
+
+input,
+select,
+textarea,
+.select2-container--default .select2-selection--single {
+    @apply !rounded !min-h-[36px] leading-[2rem];
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 2.2 !important;
+}
+
+textarea.input-text {
+    min-height: 200px !important;
+}

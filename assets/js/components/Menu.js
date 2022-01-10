@@ -82,17 +82,12 @@ function classNames(...classes) {
 export default function Menu() {
   return (
     <Popover className="relative bg-white border-b-1 border-gray-200 ">
-      <div className="bg-white wrapper ">
+      <div className="bg-white wrapper">
         <div className="flex justify-between items-center py-6 md:justify-start md:space-x-10">
 
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <a href="#">
-              <span className="sr-only">Workflow</span>
-              <img
-                className="h-8 w-auto sm:h-10"
-                src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                alt=""
-              />
+              Cape Town Gear
             </a>
           </div>
           <div className="-mr-2 -my-2 md:hidden">

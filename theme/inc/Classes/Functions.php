@@ -42,7 +42,7 @@ class Functions
 
 	public function theme_menus()
 	{
-		ThemeMenus::get_instance();
+		Menu::get_instance();
 	}
 
 

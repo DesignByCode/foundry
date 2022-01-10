@@ -15,22 +15,20 @@
 <section id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="w-full pt-24 pb-36  bg-primary-300">
 		<div class="wrapper bg-primary-300 px-10 text-center">
-			<?php the_title( '<h1 class="entry-title title text-primary-600">', '</h1>' ); ?>
+			<a href="<?php the_permalink();?>">
+				<?php single_post_title( '<h1 class="entry-title sub-title font-black text-primary-600">', '</h1>' ); ?>
+			</a>
 		</div>
 	</header>
-	<div class="max-w-4xl mx-auto">
+	<div class="max-w-2xl mx-auto">
 
-		<article class="bg-white prose mx-auto px-20 pb-20 <?php if (!has_post_thumbnail()): ?> pt-20 <?php endif; ?> rounded-3xl -translate-y-20 shadow-2xl
+		<article class="bg-white prose mx-auto p-20 rounded-3xl -translate-y-20 shadow-2xl
 			shadow-primary-500/20">
-			<div class="entry-content">
-				<?php if (has_post_thumbnail()): ?>
-				<div class="-mx-20 relative mb-20">
-					<?php the_post_thumbnail('post-thumbnail',
-						['class' => 'w-full rounded-xl shadow-2xl shadow-primary-500 block'
-							, 'title' => 'Feature image for Post']); ?>
-					<?php endif; ?>
+			<div class="entry-content text-center">
+				<?php the_excerpt(); ?>
+				<div class="not-prose w-full mt-10">
+					<a class="px-5 py-2 rounded bg-primary-500 hover:bg-primary-400 text-white no-underline" href="<?php the_permalink();?>">VIEW</a>
 				</div>
-				<?php the_content(); ?>
 			</div>
 		</article>
 	</div>
