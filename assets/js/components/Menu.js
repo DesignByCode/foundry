@@ -81,9 +81,10 @@ function classNames(...classes) {
 
 export default function Menu() {
   return (
-    <Popover className="relative bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
+    <Popover className="relative bg-white border-b-1 border-gray-200 ">
+      <div className="bg-white wrapper ">
+        <div className="flex justify-between items-center py-6 md:justify-start md:space-x-10">
+
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <a href="#">
               <span className="sr-only">Workflow</span>
@@ -188,7 +189,7 @@ export default function Menu() {
                     <ChevronDownIcon
                       className={classNames(
                         open ? 'text-gray-600' : 'text-gray-400',
-                        'ml-2 h-5 w-5 group-hover:text-red-500'
+                        'ml-2 h-5 w-5 group-hover:text-gray-500'
                       )}
                       aria-hidden="true"
                     />
@@ -260,7 +261,6 @@ export default function Menu() {
           </div>
         </div>
       </div>
-
       <Transition
         as={Fragment}
         enter="duration-200 ease-out"

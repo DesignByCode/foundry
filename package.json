@@ -14,11 +14,11 @@
     "tailwindcss": "^3.0.12"
   },
   "scripts": {
-    "development:tailwindcss": "npx tailwindcss --postcss -i ./tailwindcss/tailwind.css -o ./theme/style.css",
-    "development:js": "wp-scripts start ./assets/js/foundry.js --output-path=theme/js",
-    "dev": "run-p development:*",
+    "development:tailwindcss": "npx tailwindcss --postcss -i ./tailwindcss/tailwind.css -o ./theme/style.css -w",
+    "development:js": "wp-scripts start ./assets/js/foundry.js --output-path=theme/js ",
+    "watch:dev": "run-p development:tailwindcss",
     "watch:sync": "browser-sync start --proxy \"capetowntees.test\" --files \"theme\" --no-inject-changes",
-    "watch": "run-p watch:sync dev"
+    "watch": "run-p watch:sync"
   },
   "repository": {
     "type": "git",

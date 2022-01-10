@@ -1,5 +1,8 @@
 @import "theme-header.css";
 
-@tailwind base;
-@tailwind utilities;
-@tailwind components;
+@import "tailwindcss/base.css";
+@import "tailwindcss/utilities.css";
+@import "tailwindcss/components.css";
+
+@import "./globals.css";
+@import "./wordpress-blocks.css";

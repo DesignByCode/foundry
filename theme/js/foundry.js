@@ -2376,11 +2376,11 @@ function classNames() {
 
 function Menu() {
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_headlessui_react__WEBPACK_IMPORTED_MODULE_4__.Popover, {
-    className: "relative bg-gray-50"
+    className: "relative bg-white border-b-2 border-gray-700 "
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "max-w-7xl mx-auto px-4 sm:px-6"
+    className: "bg-white wrapper "
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10"
+    className: "flex justify-between items-center py-6 md:justify-start md:space-x-10"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "flex justify-start lg:w-0 lg:flex-1"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
@@ -2470,7 +2470,7 @@ function Menu() {
     return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_1__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_headlessui_react__WEBPACK_IMPORTED_MODULE_4__.Popover.Button, {
       className: classNames(open ? 'text-gray-900' : 'text-gray-500', 'group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900' + ' focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-stone-500')
     }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", null, "More"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_heroicons_react_solid__WEBPACK_IMPORTED_MODULE_3__.ChevronDownIcon, {
-      className: classNames(open ? 'text-gray-600' : 'text-gray-400', 'ml-2 h-5 w-5 group-hover:text-red-500'),
+      className: classNames(open ? 'text-gray-600' : 'text-gray-400', 'ml-2 h-5 w-5 group-hover:text-gray-500'),
       "aria-hidden": "true"
     })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_headlessui_react__WEBPACK_IMPORTED_MODULE_5__.Transition, {
       as: react__WEBPACK_IMPORTED_MODULE_1__.Fragment,

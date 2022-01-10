@@ -1,5 +1,11 @@
 <?php get_header(); ?>
 
-<div id="menu">menu</div>
+<?php if (have_posts()): ?>
+    <?php while (have_posts()):
+        the_post();
+   		get_template_part('template/content/content');
+     endwhile; ?>
+<?php endif; ?>
 
-<?php get_footer(); ?>
+<?php
+get_footer();

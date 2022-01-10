@@ -19,11 +19,11 @@
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class('bg-primary-900 text-purple-200'); ?>>
+<body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
     <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'foundry' ); ?></a>
+    <div id="menu"></div>
+    <main role="main" id="content" class="site-content">
+        <?php get_template_part('template/part/header'); ?>
 
-    <div id="content" class="site-content bg-gray-500 text-white">
-        <div id="primary" class="content-area wrapper">
-            <main id="main" class="site-main" role="main">

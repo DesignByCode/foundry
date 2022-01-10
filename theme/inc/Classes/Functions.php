@@ -21,13 +21,13 @@ class Functions
 
     public function register_styles()
     {
-        wp_register_style('foundry-css', FOUNDRY_DIR_URI . '/style.css', [],  FOUNDRY_DIR_URI . '/style.css' , 'all' );
+        wp_register_style('foundry-css', FOUNDRY_DIR_URI . '/style.css', [],  filemtime(FOUNDRY_DIR_PATH . '/style.css') , 'all' );
         wp_enqueue_style( 'foundry-css' );
     }
 
     public function register_scripts()
     {
-        wp_register_script('foundry-js', get_theme_file_uri('/js/foundry.js'), array('wp-element'), FOUNDRY_VERSION, true);
+        wp_register_script('foundry-js', get_theme_file_uri('/js/foundry.js'), array('wp-element'), filemtime(FOUNDRY_DIR_PATH . '/js/foundry.js'), true);
         wp_enqueue_script('foundry-js');
     }
 
