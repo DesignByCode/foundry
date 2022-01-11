@@ -9,9 +9,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: colors.stone,
-        secondary: colors.zinc,
-        gray: colors.stone,
+        primary: colors.cyan,
+        secondary: colors.sky,
+        gray: colors.slate,
       },
       typography: ({ theme }) => ({
         DEFAULT: {

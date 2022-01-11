@@ -6,6 +6,10 @@ namespace Composer\Autoload;
 
 class ComposerStaticInitdcd277c21c45e09e09a57f22cdc7fc85
 {
+    public static $files = array (
+        'b94c16cc40ce0561617da456efec870d' => __DIR__ . '/../..' . '/inc/Helpers/helpers.php',
+    );
+
     public static $prefixLengthsPsr4 = array (
         'F' => 
         array (
@@ -23,6 +27,10 @@ class ComposerStaticInitdcd277c21c45e09e09a57f22cdc7fc85
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Foundry\\Classes\\Functions' => __DIR__ . '/../..' . '/inc/Classes/Functions.php',
+        'Foundry\\Classes\\Menu' => __DIR__ . '/../..' . '/inc/Classes/Menu.php',
+        'Foundry\\Classes\\StyleAndScripts' => __DIR__ . '/../..' . '/inc/Classes/StyleAndScripts.php',
+        'Foundry\\Classes\\ThemeCustomizer' => __DIR__ . '/../..' . '/inc/Classes/ThemeCustomizer.php',
+        'Foundry\\Classes\\ThemeSupport' => __DIR__ . '/../..' . '/inc/Classes/ThemeSupport.php',
         'Foundry\\Traits\\Singleton' => __DIR__ . '/../..' . '/inc/Traits/Singleton.php',
     );
 

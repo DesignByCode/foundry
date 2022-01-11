@@ -19,6 +19,7 @@ class Functions
 		$this->theme_setup();
 		$this->theme_support();
 		$this->theme_menus();
+		$this->theme_metabox();
 	}
 
 	/**
@@ -43,6 +44,11 @@ class Functions
 	public function theme_menus()
 	{
 		Menu::get_instance();
+	}
+
+	public function theme_metabox()
+	{
+		MetaBox::get_instance();
 	}
 
 
