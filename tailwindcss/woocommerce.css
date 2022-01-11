@@ -6,3 +6,15 @@
 .woocommerce #content table.cart td.actions .coupon, .woocommerce table.cart td.actions .coupon, .woocommerce-page #content table.cart td.actions .coupon, .woocommerce-page table.cart td.actions .coupon {
     @apply flex;
 }
+
+.woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button {
+    @apply px-4 py-2 rounded-md bg-primary-200 hover:bg-primary-500 text-primary-500 hover:text-primary-50;
+}
+
+/*.woocommerce #respond input#submit:hover, .woocommerce a.button:hover, .woocommerce button.button:hover, .woocommerce input.button:hover {*/
+/*    background: #0A246A;*/
+/*}*/
+
+.woocommerce-form__input.woocommerce-form__input-checkbox {
+    @apply w-8;
+}

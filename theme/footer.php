@@ -15,10 +15,14 @@
 
 
 
-    <footer class="footer bg-gray-900 text-gray-300 py-24">
-        <div class="wrapper">
-			<?php wp_nav_menu(['location' => 'foundry-main-menu']); ?>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, ex.
+    <footer class="footer  bg-gray-900 text-gray-300 py-24">
+        <div class="wrapper prose prose-mark:text-amber-400 marker:text-amber-400 prose-a:text-primary-500 hover:prose-a:text-primary-300 prose-a:no-underline
+        hover:prose-a:underline grid
+        md:grid-cols-4
+         gap-6">
+			<?php wp_nav_menu(['theme_location' => 'foundry-footer-menu-1']); ?>
+			<?php wp_nav_menu(['theme_location' => 'foundry-footer-menu-2']); ?>
+			<?php wp_nav_menu(['theme_location' => 'foundry-footer-menu-3']); ?>
         </div>
     </footer>
 

@@ -38,7 +38,11 @@ class Menu
 	{
 		register_nav_menus([
 			"foundry-main-menu" => esc_html__('Main Menu', 'foundry'),
-			"foundry-mobile-main-menu" => esc_html__('Mobile Main Menu', 'foundry')
+			"foundry-mobile-main-menu" => esc_html__('Mobile Main Menu', 'foundry'),
+			"foundry-footer-menu-1" => esc_html__('Footer Menu 1', 'foundry'),
+			"foundry-footer-menu-2" => esc_html__('Footer Menu 2', 'foundry'),
+			"foundry-footer-menu-3" => esc_html__('Footer Menu 3', 'foundry'),
+			"foundry-footer-menu-4" => esc_html__('Footer Menu 4', 'foundry')
 		]);
 	}
 
@@ -57,6 +61,67 @@ class Menu
 	{
 		return wp_get_nav_menu_items(self::get_menu_id_by_slug($slug));
 	}
+
+	public static function get_children($menu_array, $menu_id)
+	{
+		$child_menu = [];
+
+		if (!empty($menu_array) && is_array($menu_array)) {
+			foreach ($menu_array as $menu) {
+				if ( intval($menu->menu_item_parent) === $menu_id) {
+					$child_menu[] = $child_menu;
+				}
+			}
+		}
+
+		return $child_menu;
+
+	}
+
+
+	/**
+	 * Get the menu id by menu location.
+	 *
+	 * @param string $location
+	 *
+	 * @return integer
+	 */
+	public function get_menu_id( $location ) {
+
+		// Get all locations
+		$locations = get_nav_menu_locations();
+
+		// Get object id by location.
+		$menu_id = ! empty($locations[$location]) ? $locations[$location] : '';
+
+		return ! empty( $menu_id ) ? $menu_id : '';
+
+	}
+
+	/**
+	 * Get all child menus that has given parent menu id.
+	 *
+	 * @param array   $menu_array Menu array.
+	 * @param integer $parent_id Parent menu id.
+	 *
+	 * @return array Child menu array.
+	 */
+	public function get_child_menu_items( $menu_array, $parent_id ) {
+
+		$child_menus = [];
+
+		if ( ! empty( $menu_array ) && is_array( $menu_array ) ) {
+
+			foreach ( $menu_array as $menu ) {
+				if ( intval( $menu->menu_item_parent ) === $parent_id ) {
+					$child_menus[] = $menu;
+				}
+			}
+		}
+
+		return $child_menus;
+	}
+
 
 
 

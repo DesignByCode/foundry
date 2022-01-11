@@ -1,6 +1,6 @@
 <?php
 /**
- * Abstract all Foundry functionality in separate Classes
+ * Theme header
  *
  * @package WordPress
  * @subpackage Foundry
@@ -11,15 +11,19 @@ use Foundry\Classes\Menu;
 
 
 ?>
+<?php get_template_part('template/nav/nav'); ?>
 
 <?php if (is_front_page()) : ?>
 	<header id="site-header" role="banner" class="bg-white py-12 ">
-		<div class="wrapper">
+		<div class="wrapper flex items-center md:space-x-3">
 			<?php
-			if ( function_exists( 'the_custom_logo' ) ) {
-				the_custom_logo();
-			}
-			?>
+			if ( function_exists( 'the_custom_logo' ) ): ?>
+
+				<div class="block rounded-full overflow-hidden shadow-md  ">
+					<?php the_custom_logo(); ?>
+				</div>
+
+			<?php endif; ?>
 			<div class="space-y-3">
 				<h1 class="title text-primary-600"><a href="<?php echo site_url();?>"> <?php bloginfo('name');?></a></h1>
 				<h3 class="sub-title text-secondary-500"><?php bloginfo('description');?></h3>
@@ -27,12 +31,6 @@ use Foundry\Classes\Menu;
 		</div>
 	</header>
 <?php endif;?>
-<!--<pre>-->
 
-<?php
-//print_r(Menu::get_items('foundry-main-menu')[0]->menu_item_parent);
-//wp_nav_menu([
-//	'theme_location' => 'foundry-main-menu'
-//])
-?>
-<!--</pre>-->
+
+

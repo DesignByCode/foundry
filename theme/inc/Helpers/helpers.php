@@ -2,7 +2,7 @@
 
 function foundry_get_post_thumbnail($post_id,  $size = 'featured-image', $more_attributes = []) {
 
-	if ( ! post_password_required() && is_attachment() && has_post_thumbnail() ) return null;
+//	if ( ! post_password_required() && !is_attachment() && !has_post_thumbnail() ) return null;
 
 	if (empty($post_id)){
 		$post_id = get_the_ID();

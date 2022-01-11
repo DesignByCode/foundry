@@ -16,7 +16,7 @@
   "scripts": {
     "development:tailwindcss": "npx tailwindcss --postcss -i ./tailwindcss/tailwind.css -o ./theme/style.css -w",
     "development:js": "wp-scripts start ./assets/js/foundry.js --output-path=theme/js ",
-    "watch:dev": "run-p development:tailwindcss",
+    "dev": "run-p development:*",
     "watch:sync": "browser-sync start --proxy \"capetowntees.test\" --files \"theme\" --no-inject-changes",
     "watch": "run-p watch:sync"
   },
@@ -38,10 +38,12 @@
   "dependencies": {
     "@headlessui/react": "^1.4.2",
     "@heroicons/react": "^1.0.5",
+    "@popperjs/core": "^2.11.2",
     "@tailwindcss/aspect-ratio": "^0.4.0",
     "@tailwindcss/forms": "^0.4.0",
     "@tailwindcss/line-clamp": "^0.3.0",
     "@tailwindcss/typography": "^0.5.0",
+    "alpinejs": "^3.7.1",
     "axios": "^0.21.4"
   }
 }

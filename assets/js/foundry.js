@@ -1,5 +1,5 @@
-import React from 'react'
-import {render} from 'react-dom'
-import Menu from "./components/Menu";
+import Alpine from 'alpinejs'
 
-render(<Menu/>, document.getElementById('menu'));
+window.Alpine = Alpine
+
+Alpine.start()
