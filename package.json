@@ -5,8 +5,10 @@
   "main": "index.js",
   "devDependencies": {
     "@wordpress/scripts": "^19.2.2",
+    "archiver": "^5.3.0",
     "autoprefixer": "^10.4.2",
     "browser-sync": "^2.27.7",
+    "cssnano": "^5.0.15",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.5",
     "postcss-import": "^14.0.2",
@@ -14,11 +16,16 @@
     "tailwindcss": "^3.0.12"
   },
   "scripts": {
-    "development:tailwindcss": "npx tailwindcss --postcss -i ./tailwindcss/tailwind.css -o ./theme/style.css -w",
+    "development:tailwindcss": "npx tailwindcss --postcss -i ./tailwindcss/tailwind.css -o ./theme/style.css",
     "development:js": "wp-scripts start ./assets/js/foundry.js --output-path=theme/js ",
     "dev": "run-p development:*",
     "watch:sync": "browser-sync start --proxy \"capetowntees.test\" --files \"theme\" --no-inject-changes",
-    "watch": "run-p watch:sync"
+    "watch": "run-p development:js development:tailwindcss -- -w",
+    "production:tailwindcss": "npm run development:tailwindcss -- --minify",
+    "production:js": "wp-scripts build ./assets/js/foundry.js --output-path=theme/js ",
+    "prod": "run-p production:*",
+    "zip": "node scripts/zip.js foundry",
+    "bundle": "run-s production zip"
   },
   "repository": {
     "type": "git",

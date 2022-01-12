@@ -12,7 +12,11 @@ $menu_class     = Menu::get_instance();
 $header_menu_id = $menu_class->get_menu_id( 'foundry-main-menu' );
 $header_menus   = wp_get_nav_menu_items( $header_menu_id );
 ?>
-<nav class="relative bg-white border-y shadow-md py-2 border-primary-500/20">
+<nav x-data="{
+	navOpen: false,
+	closeNav() {  this.navOpen = false },
+	toggleNav() { this.navOpen = true}
+}" class="relative bg-white border-y shadow-md py-2 border-primary-500/20">
 	<div class="wrapper">
 		<div class="flex justify-between items-center py-3 md:justify-start md:space-x-10">
 			<!-- site brand -->
@@ -82,7 +86,7 @@ $header_menus   = wp_get_nav_menu_items( $header_menu_id );
 			</div>
 
 			<?php endif; ?>
-
+			<?php get_template_part('template/nav/nav', 'mobile'); ?>
 		</div>
 	</div>
 </nav>

@@ -39,6 +39,7 @@ class Functions
 	{
 		ThemeSupport::get_instance();
 		ThemeCustomizer::get_instance();
+		Woocommerce::get_instance();
 	}
 
 	public function theme_menus()
