@@ -34,7 +34,7 @@ class Woocommerce
 		ob_start();
 		?>
 
-			<a class="cart-customlocation relative pl-4 pr-2 py-2 group rounded-md inline-flex items-center text-base font-medium focus:outline-none focus:ring-2
+			<a class="cart-customlocation relative z-50 pl-4 pr-2 py-2 group rounded-md inline-flex items-center text-base font-medium focus:outline-none focus:ring-2
 					focus:ring-offset-2 focus:ring-primary-500  text-white text-primary-50 bg-primary-500 hover:bg-primary-600" href="<?php echo wc_get_cart_url(); ?>"
 			   title="<?php _e( 'View your shopping cart' ); ?>">
 				<?php if ( WC()->cart->get_cart_contents_count() !== 0): ?>

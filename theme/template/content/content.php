@@ -14,14 +14,14 @@
 
 <section id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php if(!foundry_hide_post_title()): ?>
+		<?php if (! is_front_page()): ?>
 	<header class="w-full pt-24 pb-36 bg-gradient-to-br from-primary-500 to-secondary-300">
 		<div class="wrapper px-10 text-center">
 			<?php the_title( '<h1 class="entry-title title text-primary-600">', '</h1>' ); ?>
-			<div class="mt-5 inline-block space-x-3 rounded-full shadow-md shadow-primary-500/20">
 
-			</div>
 		</div>
 	</header>
+		<?php endif; ?>
 	<?php endif;?>
 	<div class="max-w-7xl mx-auto">
 <!--		--><?php //if(foundry_hide_post_title()): ?><!-- <div class="mt-20"></div> --><?php //endif;?>

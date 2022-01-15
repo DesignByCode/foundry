@@ -24,9 +24,7 @@ if (is_user_logged_in()): ?>
 		<button
 			aria-expanded="false"
 			x-on:click="toggleAccount()"
-			x-on:keydown.escape.prevent.stop="close($refs.button_account)"
-			:id="$id('account-button')"
-			:ref="button_account"
+			x-on:keydown.escape.prevent.stop="close()"
 			class="inline-flex relative h-9 w-11">
 			<img src="<?= get_avatar_url(wp_get_current_user()->user_email); ?>"
 				 class="absolute h-11 w-11  rounded-lg border-2 border-white shadow-md"

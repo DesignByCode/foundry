@@ -15,7 +15,7 @@
 
 
 
-    <footer class="footer  bg-gray-900 text-gray-300 py-24">
+    <footer class="footer  bg-gray-900  py-24">
         <div class="wrapper prose prose-mark:text-amber-400 marker:text-amber-400 prose-a:text-primary-500 hover:prose-a:text-primary-300 prose-a:no-underline
         hover:prose-a:underline grid
         md:grid-cols-4
@@ -24,6 +24,11 @@
 			<?php wp_nav_menu(['theme_location' => 'foundry-footer-menu-2']); ?>
 			<?php wp_nav_menu(['theme_location' => 'foundry-footer-menu-3']); ?>
         </div>
+		<div class="wrapper text-gray-500 pt-12  text-center">
+			<a class="text-rose-500 hover:underline" href="<?= get_theme_mod('copyright-url');?>" target="_blank" rel="nofollow">
+				<?= get_theme_mod('copyright-text'); ?>
+			</a>
+		</div>
     </footer>
 
 	</main><!-- #main -->

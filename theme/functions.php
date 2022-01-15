@@ -13,8 +13,7 @@ if ( ! defined( 'FOUNDRY_DIR_PATH' ) ) {
 if ( ! defined( 'FOUNDRY_DIR_URI' ) ) {
     define( 'FOUNDRY_DIR_URI', untrailingslashit( get_template_directory_uri() ) );
 }
-//wp_die(FOUNDRY_DIR_PATH);
-//wp_die(filemtime(FOUNDRY_DIR_PATH . '/style.css'));
+
 
 require_once __DIR__ . '/vendor/autoload.php';
 
