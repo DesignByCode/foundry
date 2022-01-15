@@ -28,9 +28,11 @@ class ComposerStaticInitdcd277c21c45e09e09a57f22cdc7fc85
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Foundry\\Classes\\Functions' => __DIR__ . '/../..' . '/inc/Classes/Functions.php',
         'Foundry\\Classes\\Menu' => __DIR__ . '/../..' . '/inc/Classes/Menu.php',
+        'Foundry\\Classes\\MetaBox' => __DIR__ . '/../..' . '/inc/Classes/MetaBox.php',
         'Foundry\\Classes\\StyleAndScripts' => __DIR__ . '/../..' . '/inc/Classes/StyleAndScripts.php',
         'Foundry\\Classes\\ThemeCustomizer' => __DIR__ . '/../..' . '/inc/Classes/ThemeCustomizer.php',
         'Foundry\\Classes\\ThemeSupport' => __DIR__ . '/../..' . '/inc/Classes/ThemeSupport.php',
+        'Foundry\\Classes\\Woocommerce' => __DIR__ . '/../..' . '/inc/Classes/Woocommerce.php',
         'Foundry\\Traits\\Singleton' => __DIR__ . '/../..' . '/inc/Traits/Singleton.php',
     );
 

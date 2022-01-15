@@ -33,6 +33,7 @@ class ThemeSupport
 
 		add_theme_support( 'automatic-feed-links' );
 
+		add_theme_support('responsive-embeds');
 
 		add_theme_support( 'core-block-patterns' );
 

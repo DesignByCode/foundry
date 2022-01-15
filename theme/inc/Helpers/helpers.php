@@ -117,3 +117,59 @@ function foundry_authored_by()
 }
 
 
+
+function foundry_min_cart() {
+	?>
+		<a class="cart-customlocation relative pl-4 pr-2 py-2 group rounded-md inline-flex items-center text-base font-medium focus:outline-none focus:ring-2
+					focus:ring-offset-2 focus:ring-primary-500  text-white text-primary-50 bg-primary-500 hover:bg-primary-600" href="<?php echo wc_get_cart_url(); ?>"
+		   title="<?php _e( 'View your shopping cart' ); ?>">
+		<?php if ( WC()->cart->get_cart_contents_count() !== 0): ?>
+			<span class="absolute rounded-full bg-rose-500 text-xs py-1 px-2 shadow-md shadow-rose-700  -right-3 -top-2 text-white">
+		<?= WC()->cart->get_cart_contents_count();?>
+	</span>
+		<?php endif;?>
+		<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+		</svg>
+		<span class="mr-2">
+
+	<?php echo WC()->cart->get_cart_total(); ?>
+	</span>
+	</a>
+<?php
+}
+
+function foundry_get_shop_url($name = 'shop'){
+	return get_permalink( woocommerce_get_page_id( $name) );
+}
+
+function foundry_get_checkout_url(){
+	global $woocommerce;
+	return $woocommerce->cart->get_checkout_url();
+}
+
+function foundry_get_cart_url(){
+	global $woocommerce;
+	return $woocommerce->cart->get_cart_url();
+}
+
+
+function foundry_get_account_url(){
+	$myaccount_page_id = get_option( 'woocommerce_myaccount_page_id' );
+	return get_permalink( $myaccount_page_id );
+}
+
+
+
+
+function dd($data){
+		echo '<pre>';
+		print_r($data);
+	if (is_array($data)) {
+	}else {
+		echo $data;
+	}
+	wp_die('');
+}
+
+

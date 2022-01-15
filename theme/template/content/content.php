@@ -36,9 +36,9 @@
 					<?php endif; ?>
 				</div>
 				<?php the_content(); ?>
-				<div class="not-prose space-x-3">
-					<?php foundry_posted_on(); foundry_authored_by(); ?>
-				</div>
+<!--				<div class="not-prose space-x-3">-->
+<!--					--><?php //foundry_posted_on(); foundry_authored_by(); ?>
+<!--				</div>-->
 			</div>
 
 		</article>

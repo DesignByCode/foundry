@@ -25,7 +25,7 @@
     "production:js": "wp-scripts build ./assets/js/foundry.js --output-path=theme/js ",
     "prod": "run-p production:*",
     "zip": "node scripts/zip.js foundry",
-    "bundle": "run-s production zip"
+    "bundle": "run-s prod zip"
   },
   "repository": {
     "type": "git",

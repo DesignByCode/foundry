@@ -39,6 +39,7 @@ class Menu
 		register_nav_menus([
 			"foundry-main-menu" => esc_html__('Main Menu', 'foundry'),
 			"foundry-mobile-main-menu" => esc_html__('Mobile Main Menu', 'foundry'),
+			"foundry-mobile-main-submenu" => esc_html__('Mobile Main Sub Menu', 'foundry'),
 			"foundry-footer-menu-1" => esc_html__('Footer Menu 1', 'foundry'),
 			"foundry-footer-menu-2" => esc_html__('Footer Menu 2', 'foundry'),
 			"foundry-footer-menu-3" => esc_html__('Footer Menu 3', 'foundry'),

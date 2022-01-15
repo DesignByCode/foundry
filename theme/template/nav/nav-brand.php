@@ -12,6 +12,6 @@
 
 <!-- site brand -->
 <div class="flex relative justify-start lg:w-0 lg:flex-1">
-	<a class="text-primary-500 text-2xl tracking-tighter font-bold" href="<?php site_url(); ?>"><?php bloginfo('name'); ?></a>
+	<a class="text-primary-500 text-2xl tracking-tighter font-bold" href="<?= site_url(); ?>"><?php bloginfo('name'); ?></a>
 </div>
 <!-- end site brand -->

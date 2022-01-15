@@ -22,3 +22,10 @@ function foundry_load_functions(){
     \Foundry\Classes\Functions::get_instance();
 }
 foundry_load_functions();
+
+
+
+
+
+
+

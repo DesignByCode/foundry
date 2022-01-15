@@ -1,30 +1,19 @@
 <?php
 /**
- * The main front page
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ * Foundry Login page
  *
  * @package WordPress
  * @subpackage Foundry
  * @since Foundry 1.0
  */
-get_header();
-?>
+get_header(); ?>
 
-
-
-<?//= foundry_get_checkout_url() ?>
-<?//= foundry_get_account_url() ?>
-<?//= foundry_get_cart_url() ?>
-
-
-
+<h1>login</h1>
 <?php if (have_posts()): ?>
 	<?php while (have_posts()):
 		the_post();
 		get_template_part('template/content/content');
 	endwhile; ?>
+<?php else: get_template_part('template/content/none');?>
 <?php endif;
 get_footer();
-?>
-
